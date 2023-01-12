@@ -1,15 +1,16 @@
 // complete the given function
 
 function palindrome(str){
-let r = str.length;
-	let l = 0;
-	while(l<r){
-		if(str[r] != str[l]){
-			return false;
-		}
-		l++;
-		r--;
-	}
-	return true;
+  let rev_str = "";
+      for( let i = str.length-1 ;i >= 0 ;i--)
+      {
+        rev_str+= str[i];
+      }
+      // return reverse string
+      if (str.toLowerCase()===rev_str.toLowerCase()) {
+          return true
+      } else {
+          return false
+      }
 }
 module.exports = palindrome
